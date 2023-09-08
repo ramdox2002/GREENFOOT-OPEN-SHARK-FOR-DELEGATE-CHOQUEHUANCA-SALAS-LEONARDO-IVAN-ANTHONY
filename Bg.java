@@ -20,6 +20,7 @@ public class Bg extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        prepare();
     }
     
     public void act () {
@@ -41,12 +42,31 @@ public class Bg extends World
             }
         }
 
-    
     }
     
     public void prepare () 
     {
-    
+        // EL MEGALODON O TIBURON APARECE ACA
+        Megalodon shark = new Megalodon();
+        addObject(shark, 100, 100);
+        
+        // LAS ORCAS APARECEN ACA
+        KillerWhale enemy = new KillerWhale();
+        addObject(enemy, 300, 300);
+        KillerWhale enemy1 = new KillerWhale();
+        addObject(enemy1, 500, 200);
+        KillerWhale enemy2 = new KillerWhale();
+        addObject(enemy2, 400, 100);
+        
+        // APARECEN LOS CALAMARES
+        
+        Squid squid = new Squid();
+        addObject(squid, 200, 300);
+        Squid squid1 = new Squid();
+        addObject(squid1, 300, 200);
+        Squid squid2 = new Squid();
+        addObject(squid2, 400, 100);
+        
     }
     
     
